@@ -44,7 +44,7 @@ def welcome():
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
         f"/api/v1.0/startdate2010-01-01<br/>"
-        f"/api/v1.0/start/end2017-08-23<br/>"       
+        f"/api/v1.0/start_end2017-08-23<br/>"       
     )
 
 @app.route("/api/v1.0/precipitation")
@@ -140,7 +140,7 @@ def start():
 
         return jsonify(start_all)
 
-@app.route("api/v1.0/start/end")
+@app.route("/api/v1.0/start_end")
 def start_end():
        
     #Create Session
@@ -168,5 +168,5 @@ def start_end():
 
 
 #Stop Flask
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
